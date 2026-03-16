@@ -110,11 +110,26 @@ function Navbar() {
             <button className="w-full h-[44px] rounded-[8px] bg-[#693B93] text-white font-bold text-[14px]">
               Contact US
             </button>
-            <button className="flex items-center w-full h-[44px] justify-between rounded-[8px] border border-[#693B93] bg-[#F9F3FF] text-[#0F0F0F] font-visby font-semibold text-[14px] px-4">
-              <img src={germany} alt="Germany" className="w-[20px] h-[20px]" />
-              <span>Germany</span>
-              <img src={dropDown} alt="dropdown" className="w-[20px] h-[20px]" />
+             <button
+          onClick={() => setSel(!sel)}
+          className="flex items-center w-full h-[44px] justify-between rounded-[8px] border border-[#693B93] bg-[#F9F3FF] text-[#0F0F0F] font-visby font-semibold text-[14px] px-4"
+        >
+          <img src={lang.flag} alt={lang.name} className="w-[20px] h-[20px]" />
+          <span>{lang.name}</span>
+          <img src={dropDown} alt="dropdown" className="w-[20px] h-[20px]" />
+        </button>
+   {sel && (
+          <div className="absolute top-full mt-2  bg-[#F9F3FF] border border-[#693B93] rounded-[8px] z-50 flex flex-col">
+            <button onClick={() => { setLang({ name: "English", flag: USA }); setSel(false); }} className="flex items-center px-4 py-2 hover:bg-gray-200">
+              <img src={USA} alt="English" className="w-[20px] h-[20px] mr-2" />
+              English
             </button>
+            <button onClick={() => { setLang({ name: "Germany", flag: germany }); setSel(false); }} className="flex items-center px-4 py-2 hover:bg-gray-200">
+              <img src={germany} alt="Germany" className="w-[20px] h-[20px] mr-2" />
+              Germany
+            </button>
+          </div>
+        )}
           </div>
         </div>
       )}
