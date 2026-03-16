@@ -1,0 +1,31 @@
+import Logo from '../assets/LogoQ1.svg';
+
+function Navbar() {
+  return (
+    <nav className="bg-white shadow-md p-4">
+      <div className="flex items-center justify-between">
+        {/* Left section with logo */}
+       
+
+        {/* Middle section with nav links */}
+        <div>
+          <ul className="flex space-x-6">
+            <li className="text-gray-700 hover:text-blue-500 cursor-pointer">Home</li>
+            <li className="text-gray-700 hover:text-blue-500 cursor-pointer">About</li>
+            <li className="text-gray-700 hover:text-blue-500 cursor-pointer">Services</li>
+            <li className="text-gray-700 hover:text-blue-500 cursor-pointer">Contact</li>
+          </ul>
+        </div>
+
+        {/* Right section with button */}
+        <div>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;

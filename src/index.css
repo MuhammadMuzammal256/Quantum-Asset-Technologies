@@ -1,0 +1,14 @@
+@import "tailwindcss";
+/* 
+@import url('https://fonts.googleapis.com/css2?family=Octarine:wght@400;700&display=swap');
+
+
+* {
+  font-family: 'Octarine',;
+  margin: 0px;
+  padding: 0px;
+} */
+button:hover {
+  cursor: pointer;
+ 
+}
