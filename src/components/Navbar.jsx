@@ -3,6 +3,8 @@ import Logo from "../assets/LogoQ1.svg";
 import germany from "../assets/germany-flag.svg";
 import dropDown from "../assets/direction-down.svg";
 import hamBug from "../assets/hambug.svg";
+import cross from "../assets/cross.svg";
+
 import USA from "../assets/united-states-flg.svg";
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); 
@@ -85,9 +87,9 @@ function Navbar() {
 
    <div className="block lg:hidden">
   <img
-    src={hamBug}
+    src={menuOpen ? cross : hamBug}
     alt="Menu"
-    className="cursor-pointer"
+    className="cursor-pointer w-[22px]"
     onClick={() => setMenuOpen(!menuOpen)}
   />
 </div>
